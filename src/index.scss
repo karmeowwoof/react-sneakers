@@ -124,6 +124,8 @@ h2 {
 .cartTotalBlock {
 
 ul {
+  display: block;
+  margin-bottom: 40px !important;
   li {
     display: flex;
     align-items: flex-end;
@@ -138,7 +140,26 @@ ul {
     margin: 0 7px;
   }
 }
-button {
+.greenButton {
+  position: relative;
+
+  &:hover {
+    img {
+      transform:  translateX(10px);
+    }
+  }
+  
+  img {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    transition:  transform 0.15s ease-in-out;
+  }
+}
+
+}
+
+.greenButton {
   width: 100%;
 height: 55px;
 background: #9DD558;
@@ -146,13 +167,25 @@ border-radius: 18px;
 border: 0;
 color: #FFFFFF;
 font-size: 16px;
+font-weight: 500;
+cursor: pointer;
+transition: background 0.2s ease-in-out;
+
+&:hover {
+  background: lighten( #9DD558, 10%)
 }
+&:active {
+  background: darken( #9DD558, 10%)
+}
+
 }
 
 }
 
 .items {
   flex: 1;
+  overflow: auto;
+  margin-bottom: 40px;
 }
 
 .cartItem {
