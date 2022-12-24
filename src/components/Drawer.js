@@ -1,30 +1,23 @@
-function Drawer() {
+function Drawer(props) {
     return (
-        <div style={ { display: 'none'} } className="overlay">
+        <div  className="overlay">
         <div className="drawer">
           <h2  className="mb-30 d-flex justify-between" >Корзина 
-            <img className="removeBtn cu-p" width={20} height={20} src="/img/btn-remove.svg" alt="remove" />
+            <img onClick={props.onClose} className="removeBtn cu-p" width={20} height={20} src="/img/btn-remove.svg" alt="remove" />
           </h2>
           
           <div className="items">
             
           <div className="cartItem d-flex align-center mb-20">    
             <div style={{ backgroundImage: 'url(/img/sneakers/1.jpg)'}} className="cartItemImg"></div>
-            <div className="mr-20">
+            <div className="mr-20 flex">
               <p className="mb-5" >Мужские кроссовки Nke Air Max 270</p>
               <b>12 999 руб.</b>
             </div>
             <img className="removeBtn" width={20} height={20} src="/img/btn-remove.svg" alt="remove" />
           </div>
 
-          <div className="cartItem d-flex align-center mb-20">    
-            <div style={{ backgroundImage: 'url(/img/sneakers/2.jpg)'}} className="cartItemImg"></div>
-            <div className="mr-20">
-              <p className="mb-5" >Мужские кроссовки Nke Air Max 270</p>
-              <b>12 999 руб.</b>
-            </div>
-            <img className="removeBtn" width={20} height={20} src="/img/btn-remove.svg" alt="remove" />
-          </div>
+          
           
           </div>
         <div className="cartTotalBlock">
